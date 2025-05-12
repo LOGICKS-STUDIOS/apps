@@ -1,3 +1,15 @@
+@keyframes scrollanim {
+    from {
+        translate: -20pc 0;
+        opacity: 0;
+    }
+
+    to {
+        translate: 0 0;
+        opacity: 1;
+    }
+}
+
 @keyframes spin {
     from {
         --angle: 0deg;
@@ -24,11 +36,11 @@ body {
 
 header {
     background-color: rgb(59, 72, 116);
-    padding:.1%;
+    padding: .1%;
 
 }
 
-div.floater{
+div.floater {
     display: flex;
     margin: 0 auto;
     flex-wrap: wrap;
@@ -56,9 +68,9 @@ div.another {
     margin: 0 auto;
     margin-top: 2pc;
     margin-bottom: 2pc;
-    min-width:10pc;
-    width: 70pc;
-    max-width: 97%;
+    min-width: 10pc;
+    width: 50pc;
+    max-width: 95%pc;
     height: 90%;
 }
 
@@ -118,18 +130,18 @@ button {
 
 
 
-h2.job{
-margin-top: -1.5pc;
+h2.job {
+    margin-top: -1.5pc;
 }
 
-h1.bigtext{
-    margin:0;
-    text-shadow:black 1pc 1pc .25pc;
+h1.bigtext {
+    margin: 0;
+    text-shadow: black 1pc 1pc .25pc;
     font-size: 10pc;
     width: auto;
     height: 15pc;
     padding: 4.5pc 0;
-    background-image:linear-gradient(rgb(59, 72, 116),rgb(0, 0, 0));
+    background-image: linear-gradient(rgb(59, 72, 116), rgb(0, 0, 0));
 }
 
 .botpos {
@@ -146,14 +158,14 @@ h1.bigtext{
 .butlink {
     text-align: center;
     width: 100%;
-        display: block;
+    display: block;
     margin: 0 auto;
 }
 
 
 
 
-button{
+button {
     border-radius: 2pc;
     background-color: rgb(16, 38, 163);
     width: 75%;
@@ -163,9 +175,15 @@ button{
     margin: 0.5pc;
 }
 
-button.dntbtn{
-background-color: rgb(70, 87, 143);
-margin: 2pc 0;
+.scrollanim {
+    animation: scrollanim linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 20%;
+}
+
+button.dntbtn {
+    background-color: rgb(70, 87, 143);
+    margin: 2pc 0;
 
 }
 
@@ -174,16 +192,16 @@ p {
     font-size: 1.25pc;
 }
 
-.textmarg{
+.textmarg {
     margin: 1pc;
     line-height: 2pc;
 }
 
-.topmarg{
+.topmarg {
     margin-top: 1pc;
 }
 
-.marg{
+.marg {
     margin: 2pc;
 }
 
@@ -227,16 +245,16 @@ li {
     margin-bottom: 0.5pc;
 }
 
-@media screen and (max-width:768px){
-    h1.bigtext{
+@media screen and (max-width:768px) {
+    h1.bigtext {
         font-size: 6pc;
-}
+    }
 
 }
 
-@media screen and (max-width:480px){
-    h1.bigtext{
-        font-size: 3pc;
-}
+@media screen and (max-width:480px) {
+    h1.bigtext {
+        font-size: 4pc;
+    }
 
 }
