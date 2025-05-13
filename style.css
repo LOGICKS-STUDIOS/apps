@@ -136,12 +136,15 @@ h2.job {
 
 h1.bigtext {
     margin: 0;
+    margin-top: -2pc;
     text-shadow: black 1pc 1pc .25pc;
     font-size: 10pc;
     width: auto;
-    height: 15pc;
+    height: 10pc;
     padding: 4.5pc 0;
+    padding-top: 0;
     background-image: linear-gradient(rgb(59, 72, 116), rgb(0, 0, 0));
+    border-bottom: 1pc solid rgb(2, 2, 27);
 }
 
 .botpos {
@@ -176,10 +179,14 @@ button {
 }
 
 .scrollanim {
+            translate: -20pc 0;
+        opacity: 0;
     animation: scrollanim linear;
     animation-timeline: view();
-    animation-range: entry 0 cover 20%;
+    animation-range: entry 0% cover 25%;
+animation-fill-mode: forwards;
 }
+
 
 button.dntbtn {
     background-color: rgb(70, 87, 143);
@@ -248,6 +255,12 @@ li {
 @media screen and (max-width:768px) {
     h1.bigtext {
         font-size: 6pc;
+        text-shadow: .6pc;
+        height: 6pc;
+    }
+
+    .marg{
+        margin: 1.5pc;
     }
 
 }
@@ -255,6 +268,13 @@ li {
 @media screen and (max-width:480px) {
     h1.bigtext {
         font-size: 4pc;
+        text-shadow: .4pc;
+        height: 6pc;
     }
+
+    .marg{
+        margin: 1pc;
+    }
+
 
 }
