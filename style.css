@@ -35,10 +35,39 @@ body {
 }
 
 header {
-    background-color: rgb(59, 72, 116);
+    background-color: rgb(19, 25, 48);
     padding: .1%;
 
 }
+
+h1.bigtext {
+    margin: 0;
+    margin-top: -2pc;
+    text-shadow: black 1pc 1pc .25pc;
+    font-size: 10pc;
+    width: auto;
+    height: 10pc;
+    padding: 4.5pc 0;
+    padding-top: 0;
+    background-image: linear-gradient(rgb(19, 25, 48) 50%, rgb(0, 0, 0));
+}
+
+h1.mainhead{
+    font-size: 5pc;
+    margin-bottom: -1pc;
+        text-shadow: black .5pc .5pc .25pc;
+}
+
+.mainhead {
+    font-family: sans-serif;
+}
+
+h2.mainhead {
+    letter-spacing: .5pc;
+        text-shadow: black .3pc .3pc .20pc;
+
+}
+
 
 div.floater {
     display: flex;
@@ -74,6 +103,44 @@ div.another {
     height: 90%;
 }
 
+img.logo {
+    height: 20pc;
+    max-width: 97%;
+    border-radius: 15%;
+}
+
+
+div.logo {
+    position: relative;
+    padding: 0;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 3pc;
+    margin-bottom: 3pc;
+    width: max-content;
+    background-color: rgb(0, 0, 0);
+    border-radius: 15%;
+}
+
+div.logo::before,
+div.logo::after {
+    --angle: 0deg;
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+    background-image: conic-gradient(from var(--angle), rgb(17, 0, 255), rgb(73, 96, 148), rgb(17, 0, 255));
+    filter: blur(1pc);
+    opacity: 0.5;
+    border-radius: 15%;
+    animation: spin 1.5s linear infinite;
+}
+
 div.glow {
     position: relative;
     background-color: rgb(46, 44, 44);
@@ -97,6 +164,8 @@ div.glow::before {
     animation: spin 1.5s linear infinite;
 }
 
+
+
 div.glow::before {
     filter: blur(1pc);
     opacity: 0.5;
@@ -111,7 +180,9 @@ img {
     alt: "logo";
 }
 
-h1 .apptitle {
+
+
+h1.apptitle {
     width: 100%;
     font-size: 2pc;
     margin-bottom: 1pc;
@@ -124,7 +195,6 @@ a,
 button {
     text-align: center;
     font-weight: bolder;
-    text-align: center;
     color: rgb(255, 254, 253);
 }
 
@@ -134,18 +204,6 @@ h2.job {
     margin-top: -1.5pc;
 }
 
-h1.bigtext {
-    margin: 0;
-    margin-top: -2pc;
-    text-shadow: black 1pc 1pc .25pc;
-    font-size: 10pc;
-    width: auto;
-    height: 10pc;
-    padding: 4.5pc 0;
-    padding-top: 0;
-    background-image: linear-gradient(rgb(59, 72, 116), rgb(0, 0, 0));
-    border-bottom: 1pc solid rgb(2, 2, 27);
-}
 
 .botpos {
     text-align: center;
@@ -179,18 +237,19 @@ button {
 }
 
 .scrollanim {
-            translate: -20pc 0;
-        opacity: 0;
+    translate: -20pc 0;
+    opacity: 0;
     animation: scrollanim linear;
     animation-timeline: view();
-    animation-range: entry 0% cover 25%;
-animation-fill-mode: forwards;
+    animation-range: entry 0% cover 20%;
+    animation-fill-mode: forwards;
 }
 
 
 button.dntbtn {
     background-color: rgb(70, 87, 143);
     margin: 2pc 0;
+    margin-bottom: 5pc;
 
 }
 
@@ -213,21 +272,18 @@ p {
 }
 
 
-header h1 {
-    font-size: 3pc;
-    margin-bottom: -1pc;
-}
-
-.mainhead {
-    font-family: sans-serif;
-}
-
 font {
-    color: rgb(118, 182, 235);
+    color: rgb(59, 17, 243);
 }
 
 h1.subhead {
     font-size: 2pc;
+}
+
+h2.sidehead {
+    text-align: left;
+    margin-left: 1pc;
+    margin-top: 3pc;
 }
 
 nav {
@@ -243,7 +299,7 @@ details p {
     text-align: left;
 }
 
-ul {
+ul.applist {
     margin-bottom: 5pc;
 }
 
@@ -255,11 +311,15 @@ li {
 @media screen and (max-width:768px) {
     h1.bigtext {
         font-size: 6pc;
-        text-shadow: .6pc;
+        text-shadow: .6pc .6pc .25pc;
         height: 6pc;
     }
 
-    .marg{
+    h1.mainhead {
+        font-size: 4pc;
+    }
+
+    .marg {
         margin: 1.5pc;
     }
 
@@ -268,11 +328,15 @@ li {
 @media screen and (max-width:480px) {
     h1.bigtext {
         font-size: 4pc;
-        text-shadow: .4pc;
+        text-shadow: .4pc .4pc .25pc;
         height: 6pc;
     }
 
-    .marg{
+    h1.mainhead {
+        font-size: 3pc;
+    }
+
+    .marg {
         margin: 1pc;
     }
 
